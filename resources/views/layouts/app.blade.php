@@ -20,12 +20,11 @@
     <style>
         :root {
             --primary-font: 'Inter', sans-serif;
-            --title-font: 'Outfit', sans-serif;
-            --bg-color: #f8f9fa;
+            --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --text-color: #212529;
-            --muted-text: #6c757d;
-            --border-color: #e9ecef;
+            --text-color: #1e293b;
+            --muted-text: #64748b;
+            --border-color: #e2e8f0;
         }
 
         body {
@@ -38,34 +37,35 @@
             min-height: 100vh;
         }
 
-        h1, h2, h3, h4, h5, h6, .display-font {
-            font-family: var(--title-font);
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--primary-font);
             font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.025em;
         }
 
-        /* Modern Card Styling */
+        /* Clean & Professional Card Styling */
         .news-card {
             background: var(--card-bg);
-            border: none;
-            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
             height: 100%;
             display: flex;
             flex-direction: column;
         }
 
         .news-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: #94a3b8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
 
         .news-card .card-img-wrapper {
             position: relative;
             overflow: hidden;
             padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            background-color: #eaeaea;
+            background-color: #f1f5f9;
         }
 
         .news-card .card-img-top {
@@ -75,61 +75,57 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .news-card:hover .card-img-top {
-            transform: scale(1.05);
         }
 
         .news-card .card-body {
-            padding: 1.5rem;
+            padding: 1.25rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .news-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
+            font-weight: 600;
             line-height: 1.4;
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            color: #0f172a;
             text-decoration: none;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            transition: color 0.2s ease;
+            transition: color 0.15s ease;
         }
 
         .news-title:hover {
-            color: #0d6efd;
+            color: #2563eb;
         }
 
         .news-excerpt {
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             color: var(--muted-text);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            line-height: 1.5;
         }
 
         .news-meta {
-            font-size: 0.8rem;
+            font-size: 0.775rem;
             color: var(--muted-text);
             margin-top: auto;
             border-top: 1px solid var(--border-color);
-            padding-top: 1rem;
+            padding-top: 0.75rem;
         }
 
         /* Detail News View Styling */
         .news-detail-container {
             background-color: var(--card-bg);
-            border-radius: 20px;
+            border-radius: 8px;
             padding: 2.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
             border: 1px solid var(--border-color);
         }
 

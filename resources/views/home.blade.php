@@ -5,11 +5,11 @@
 @section('content')
 <div class="row mb-5">
     <div class="col-md-8 mx-auto text-center">
-        <h1 class="display-5 mb-3 fw-extrabold" style="font-family: 'Outfit', sans-serif;">Berita Terkini</h1>
+        <h1 class="display-5 mb-3 fw-bold">Berita Terkini</h1>
         <p class="text-muted leading-relaxed">Menyajikan informasi terhangat, terpercaya, dan mendalam langsung ke hadapan Anda.</p>
         
         @if(request('search'))
-            <div class="alert alert-light border border-secondary-subtle rounded-pill py-2 px-4 d-inline-block mt-3">
+            <div class="alert alert-light border border-secondary-subtle rounded-3 py-2 px-4 d-inline-block mt-3">
                 <i class="bi bi-search me-2 text-danger"></i>
                 Hasil pencarian untuk: <strong>"{{ request('search') }}"</strong>
                 <a href="{{ route('home') }}" class="text-decoration-none ms-3 text-secondary"><i class="bi bi-x-circle-fill"></i> Bersihkan</a>
@@ -50,7 +50,7 @@
                                 {{ number_format($item->view_count) }} views
                             </span>
                         </div>
-                        <a href="{{ route('news.show', $item->slug) }}" class="btn btn-outline-dark btn-sm w-100 mt-3 rounded-pill">
+                        <a href="{{ route('news.show', $item->slug) }}" class="btn btn-outline-dark btn-sm w-100 mt-3 rounded-2">
                             Baca Selengkapnya
                         </a>
                     </div>
