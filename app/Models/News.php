@@ -21,4 +21,12 @@ class News extends Model
     {
         return 'slug';
     }
+
+    /**
+     * Get the full URL path for the thumbnail.
+     */
+    public function getThumbnailUrlAttribute(): ?string
+    {
+        return $this->thumbnail ? asset('storage/' . $this->thumbnail) : null;
+    }
 }

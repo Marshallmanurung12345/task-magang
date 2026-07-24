@@ -43,9 +43,9 @@
                 <!-- Thumbnail -->
                 <div class="mb-4">
                     <label for="thumbnail" class="form-label fw-bold">Thumbnail Berita</label>
-                    @if($news->thumbnail)
+                    @if($news->thumbnail_url)
                         <div class="mb-2">
-                            <img src="{{ asset('storage/' . $news->thumbnail) }}" class="rounded shadow-sm border" alt="Thumbnail Saat Ini" style="max-height: 150px; object-fit: cover;">
+                            <img src="{{ $news->thumbnail_url }}" class="rounded shadow-sm border" alt="Thumbnail Saat Ini" style="max-height: 150px; object-fit: cover;">
                             <div class="form-text text-muted small mt-1">Thumbnail saat ini</div>
                         </div>
                     @endif

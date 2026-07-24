@@ -12,7 +12,7 @@
 
         <article class="news-detail-container">
             <!-- Title -->
-            <h1 class="display-6 mb-3" style="font-family: 'Outfit', sans-serif; line-height: 1.3;">
+            <h1 class="display-6 mb-3" style="line-height: 1.3;">
                 {{ $news->title }}
             </h1>
 
@@ -29,9 +29,9 @@
             </div>
 
             <!-- Large Thumbnail Image -->
-            @if($news->thumbnail)
+            @if($news->thumbnail_url)
                 <div class="mb-4 rounded-4 overflow-hidden shadow-sm">
-                    <img src="{{ asset('storage/' . $news->thumbnail) }}" class="img-fluid w-100" alt="{{ $news->title }}" style="max-height: 500px; object-fit: cover;">
+                    <img src="{{ $news->thumbnail_url }}" class="img-fluid w-100" alt="{{ $news->title }}" style="max-height: 500px; object-fit: cover;">
                 </div>
             @endif
 

@@ -24,8 +24,8 @@
         <div class="col-md-6 col-lg-4">
             <div class="card news-card">
                 <div class="card-img-wrapper">
-                    @if($item->thumbnail)
-                        <img src="{{ asset('storage/' . $item->thumbnail) }}" class="card-img-top" alt="{{ $item->title }}">
+                    @if($item->thumbnail_url)
+                        <img src="{{ $item->thumbnail_url }}" class="card-img-top" alt="{{ $item->title }}">
                     @else
                         <div class="position-absolute top-0 start-0 w-100 h-100 bg-secondary d-flex align-items-center justify-content-center text-white">
                             <i class="bi bi-image fs-1"></i>

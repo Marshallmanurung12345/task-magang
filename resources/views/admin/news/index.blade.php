@@ -57,8 +57,8 @@
                         @forelse($news as $item)
                             <tr>
                                 <td>
-                                    @if($item->thumbnail)
-                                        <img src="{{ asset('storage/' . $item->thumbnail) }}" class="rounded object-fit-cover" alt="Thumb" style="width: 64px; height: 64px;">
+                                    @if($item->thumbnail_url)
+                                        <img src="{{ $item->thumbnail_url }}" class="rounded object-fit-cover" alt="Thumb" style="width: 64px; height: 64px;">
                                     @else
                                         <div class="bg-secondary text-white rounded d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
                                             <i class="bi bi-image"></i>
