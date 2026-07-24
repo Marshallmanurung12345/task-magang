@@ -2,7 +2,7 @@
 - PHP 8.4 ke atas
 - Composer
 - SQLite (sudah terkonfigurasi secara bawaan)
-
+- Menggunakan framework Laravel
 ---
 
 ## Cara Menjalankannya
@@ -25,6 +25,6 @@ Nyalakan local development server Laravel:
 php artisan serve
 ```
 
-Aplikasi Anda kini dapat diakses melalui browser pada alamat:
+Web ini dapat diakses melalui browser pada alamat:
 - **Halaman Publik (Home):** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 - **Halaman Admin CMS:** [http://127.0.0.1:8000/admin/news](http://127.0.0.1:8000/admin/news)
